@@ -63,8 +63,11 @@ app.put("/genres/:name", async (req, res) => {
 
 	try {
 		const result = await Genre.findOneAndUpdate(
+			// Finds first document with name in route parameter
 			{ name: req.params.name },
+			// Replaces name with value in body param
 			{ name: req.body.name },
+			// Sets to true so updated document is returned; Otherwise original document will be returned
 			{ new: true }
 		);
 		res.status(200).json(result);
