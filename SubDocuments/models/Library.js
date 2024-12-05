@@ -27,7 +27,7 @@ const booksData = [
 	{ name: "Condition Red - New Worlds in Space" },
 ];
 
-LibraryLocations.create({ name: "Riverside Library", book: booksData })
+LibraryLocations.create({ name: "Ontario Library", books: booksData })
 	.then((data) => console.log(data))
 	.catch((err) => console.log(err));
 
